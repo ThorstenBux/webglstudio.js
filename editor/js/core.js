@@ -17,6 +17,7 @@ var CORE = {
 	//called from index.html
 	init: function( )
 	{
+        console.log("Core.init");
 		this.root = document.body;
 		
 		//Load config file
@@ -431,3 +432,5 @@ var CORE = {
 		info.loader.style.backgroundImage = "-moz-linear-gradient( left, #AAA, cyan "+f+"%, black "+f2+"%)";
 	}
 }
+
+export default CORE;

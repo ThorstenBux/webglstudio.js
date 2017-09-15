@@ -1,3 +1,5 @@
 serverapps/fbxconv/temp
 serverapps/project_deployer/deploy
 serverapps/project_deployer/config.php
+
+node_modules/*
