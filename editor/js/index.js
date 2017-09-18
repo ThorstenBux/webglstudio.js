@@ -7,7 +7,9 @@
 //Add CORE, LiteGUI and $ into the global context
 window.CORE = require('exports-loader?CORE!./core.js');
 window.LiteGUI = require('exports-loader?LiteGUI!./extra/litegui.js');
+
 $ = require("expose-loader?$!jquery");
 window.$ = $;
+window.CodeMirror = CodeMirror;
 
 CORE.init();

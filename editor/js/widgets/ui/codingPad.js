@@ -1192,12 +1192,13 @@ CodingPadWidget.loadCodeMirror = function()
 	//load codemirror
 	if(typeof(CodeMirror) === "undefined")
 	{
-		//console.log("Loading CodeMirror...");
-		LiteGUI.requireScript( CodingPadWidget.codemirror_scripts,
-								function() {
-									//console.log("CodeMirror loaded");
-									CodingPadWidget.prepareCodeMirror();
-								});
+        //console.log("Loading CodeMirror...");
+        CodingPadWidget.prepareCodeMirror();
+		// LiteGUI.requireScript( CodingPadWidget.codemirror_scripts,
+		// 						function() {
+		// 							//console.log("CodeMirror loaded");
+		// 							CodingPadWidget.prepareCodeMirror();
+		// 						});
 		LiteGUI.requireCSS( CodingPadWidget.codemirror_css );
 		LiteGUI.addCSS(".error-line { background-color: #511; }\n\
 						.CodeMirror div.CodeMirror-cursor, .CodeMirror pre { z-index: 0 !important; }\n\
@@ -1206,6 +1207,12 @@ CodingPadWidget.loadCodeMirror = function()
 	}
 	else
 	{
+        CodingPadWidget.prepareCodeMirror(); 
+        LiteGUI.requireCSS( CodingPadWidget.codemirror_css );
+		LiteGUI.addCSS(".error-line { background-color: #511; }\n\
+						.CodeMirror div.CodeMirror-cursor, .CodeMirror pre { z-index: 0 !important; }\n\
+						.CodeMirror-selected { background-color: rgba(100,100,100,0.5) !important; outline: 1px dashed rgba(255,255,255,0.8); }\n\
+					   ");       
 		//console.log("CodeMirror found");
 	}
 }

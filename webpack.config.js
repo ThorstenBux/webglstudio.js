@@ -64,5 +64,13 @@ module.exports = {
         //     use: 'imports-loader?CORE=core'
         // }
     ]
-  }   
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+        CodeMirror: "codemirror-minified"
+        // jQuery: "jquery",
+        // "window.jQuery": "jquery",
+        // "$(window)":"jquery"
+    })
+]  
 };
