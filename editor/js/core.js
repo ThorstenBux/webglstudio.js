@@ -1,4 +1,3 @@
-/* The Core is in charge of launching the app, loading any external JS file and register modules, it also handles user preferences */
 var CORE = {
 
 	config: null, //internal configuration
@@ -432,5 +431,3 @@ var CORE = {
 		info.loader.style.backgroundImage = "-moz-linear-gradient( left, #AAA, cyan "+f+"%, black "+f2+"%)";
 	}
 }
-
-export default CORE;

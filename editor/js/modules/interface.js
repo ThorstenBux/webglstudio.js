@@ -1,6 +1,4 @@
 //This module is in charge of creating the application interface (menus, sidepanels, tabs, statusbar, etc)
-
-
 var InterfaceModule = {
 	name: "interface",
 

@@ -3,3 +3,5 @@ serverapps/project_deployer/deploy
 serverapps/project_deployer/config.php
 
 node_modules/*
+editor/bundle.js
+editor/bundle.js.map

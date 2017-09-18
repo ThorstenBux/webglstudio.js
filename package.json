@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --progress --watch",
-    "start": "webpack-dev-server --open"
+    "start": "concurrently -k -p \"[{name}]\" -n \"Webpack,HTTP-Server\" -c \"cyan.bold,green.bold\"  \"npm run watch\" \"npm run serve\" ",
+    "serve": "http-server ./editor -p 8081 -o"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,15 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
-    "webpack": "^3.5.6",
+    "concurrently": "^3.5.0",
+    "expose-loader": "^0.7.3",
+    "imports-loader": "^0.7.1",
+    "jquery": "^3.2.1",
+    "script-loader": "^0.7.1",
+    "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "exports-loader": "^0.6.4"
   }
 }

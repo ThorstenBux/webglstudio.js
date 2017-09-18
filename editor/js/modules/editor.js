@@ -1,5 +1,4 @@
 /* This module handles the tools to edit the scene */
-
 var EditorModule = { 
 	name: "editor",
 	icons_path:  "imgs/",
