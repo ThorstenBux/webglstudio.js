@@ -1265,7 +1265,7 @@ function purgeElement(d, skip) {
 //from stackoverflow http://stackoverflow.com/questions/1354064/how-to-convert-characters-to-html-entities-using-plain-javascript
 
 if(typeof escapeHtmlEntities == 'undefined') {
-        escapeHtmlEntities = function (text) {
+        const escapeHtmlEntities = function (text) {
             return text.replace(/[\u00A0-\u2666<>\&]/g, function(c) {
                 return '&' + 
                 (escapeHtmlEntities.entityTable[c.charCodeAt(0)] || '#'+c.charCodeAt(0)) + ';';
@@ -2897,7 +2897,7 @@ LiteGUI.Console = Console;
 		var dynamic_section = null;
 		if(editable)
 		{
-			splitinfo = " - " + (Area.splitbar_size + 2) +"px"; //2 px margin ¿?
+			splitinfo = " - " + (Area.splitbar_size + 2) +"px"; //2 px margin ï¿½?
 			splitbar = document.createElement("div");
 			splitbar.className = "litesplitbar " + direction;
 			if(direction == "vertical")
