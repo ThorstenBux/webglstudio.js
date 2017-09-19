@@ -1,4 +1,4 @@
-EVAL = function(code) { return new Function(code); } //done to have line number, do not move
+const EVAL = function(code) { return new Function(code); } //done to have line number, do not move
 //EVAL = function(code) { return eval("(function(){/n"+code+"/n})"); } //done to have line number, do not move
 
 const CodeMirror = require('codemirror');
@@ -6,6 +6,20 @@ require('codemirror/mode/javascript/javascript');
 require('codemirror/mode/xml/xml');
 require('codemirror/addon/hint/show-hint');
 require('codemirror/addon/hint/javascript-hint');
+require('codemirror/addon/search/searchcursor');
+require('codemirror/addon/search/search');
+require('codemirror/addon/search/matchesonscrollbar');
+require('codemirror/addon/search/match-highlighter');
+require('codemirror/addon/search/jump-to-line');
+require('codemirror/addon/dialog/dialog.js');
+require('codemirror/addon/dialog/dialog.css');
+
+require('codemirror/lib/codemirror.css');
+require('codemirror/theme/blackboard.css');
+require('codemirror/addon/hint/show-hint.css');
+require('codemirror/addon/scroll/simplescrollbars.css');
+require('codemirror/addon/search/matchesonscrollbar.css');
+
 
 function CodingPadWidget( options )
 {
@@ -1214,7 +1228,7 @@ CodingPadWidget.loadCodeMirror = function()
 	else
 	{
         CodingPadWidget.prepareCodeMirror(); 
-        LiteGUI.requireCSS( CodingPadWidget.codemirror_css );
+        // LiteGUI.requireCSS( CodingPadWidget.codemirror_css );
 		LiteGUI.addCSS(".error-line { background-color: #511; }\n\
 						.CodeMirror div.CodeMirror-cursor, .CodeMirror pre { z-index: 0 !important; }\n\
 						.CodeMirror-selected { background-color: rgba(100,100,100,0.5) !important; outline: 1px dashed rgba(255,255,255,0.8); }\n\

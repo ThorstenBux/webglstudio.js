@@ -15,6 +15,13 @@ module.exports = {
   devtool: 'cheap-source-map',
   module: {
     rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                    ]
+            }
         // {
         //     test: /\.js$/,
         //     exclude: /(node_modules)/,
