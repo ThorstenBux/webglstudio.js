@@ -1,6 +1,12 @@
 EVAL = function(code) { return new Function(code); } //done to have line number, do not move
 //EVAL = function(code) { return eval("(function(){/n"+code+"/n})"); } //done to have line number, do not move
 
+const CodeMirror = require('codemirror');
+require('codemirror/mode/javascript/javascript');
+require('codemirror/mode/xml/xml');
+require('codemirror/addon/hint/show-hint');
+require('codemirror/addon/hint/javascript-hint');
+
 function CodingPadWidget( options )
 {
 	this.root = null;

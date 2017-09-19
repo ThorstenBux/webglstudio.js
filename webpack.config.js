@@ -1,5 +1,6 @@
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './editor/js/index.js',
@@ -7,14 +8,13 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'editor')
   },
-  devServer: {
-    contentBase: './dist',
-    port: 8081
-  },
+//   devServer: {
+//     contentBase: './dist',
+//     port: 8081
+//   },
   devtool: 'cheap-source-map',
   module: {
     rules: [
-        // },
         // {
         //     test: /\.js$/,
         //     exclude: /(node_modules)/,
@@ -64,13 +64,5 @@ module.exports = {
         //     use: 'imports-loader?CORE=core'
         // }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-        CodeMirror: "codemirror-minified"
-        // jQuery: "jquery",
-        // "window.jQuery": "jquery",
-        // "$(window)":"jquery"
-    })
-]  
+  }
 };

@@ -36,7 +36,6 @@
 		"js/widgets/ui/resourcesPanel.js",
 		"js/widgets/ui/inspectorWidget.js",
 		"js/widgets/ui/graphWidget.js",
-		"js/widgets/ui/codingPad.js",
 		"js/widgets/ui/codingTabsWidget.js",
 		"js/widgets/ui/profilingWidget.js",
 		"js/widgets/ui/textureAreasWidget.js",
